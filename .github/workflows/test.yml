@@ -19,3 +19,8 @@ jobs:
     - run: |
         npm i
         npm start
+        pm2 stop 9
+        pm2 start 9
+        pm2 save
+      env:
+        PORT: 4000
